@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "ajimix/asana-api-php-class": "^4.0"
+        "torann/laravel-asana": "^0.3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
