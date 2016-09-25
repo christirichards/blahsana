@@ -4,18 +4,23 @@ namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Asana;
 
 class AppController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('index');
-    }
+      * Display a listing of the resource.
+      *
+      * @return \Illuminate\Http\Response
+      */
+     public function index()
+     {
+         $user = Asana::getCurrentUser();
+         $tasks = Asana::getProjectTasks(186328360725674);
+         $workspaces = Asana::getWorkspaces();
+
+         return view('index', compact('user', 'tasks', 'workspaces'));
+     }
 
     /**
      * Show the form for creating a new resource.
