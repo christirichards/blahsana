@@ -13,4 +13,5 @@ Blahsana is open-sourced software licensed under the [MIT license](http://openso
 ##Contact
 
 [Christi Richards](https://christirichards.com)
+
 [@christirichards](http://twitter.com/christirichards)
