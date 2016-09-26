@@ -5,9 +5,14 @@ namespace app\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Asana;
+use App\User;
+use App\Task;
+use App\Project;
+use App\Workspace;
 
 class AppController extends Controller
 {
+
     /**
       * Display a listing of the resource.
       *
@@ -16,8 +21,11 @@ class AppController extends Controller
      public function index()
      {
          $user = Asana::getCurrentUser();
+         //$user = (new User)->getCurrentUser();
          $tasks = Asana::getProjectTasks(186328360725674);
+         //$tasks = (new Project)->getProjectTasks(186328360725674);
          $workspaces = Asana::getWorkspaces();
+         //$workspaces = (new Workspace)->getWorkspaces();
 
          return view('index', compact('user', 'tasks', 'workspaces'));
      }

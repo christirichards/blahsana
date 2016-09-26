@@ -11,7 +11,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><img src="{{$user->data->photo->image_128x128}}" class="profile">{{$user->data->name}}</a></li>
+        <li><a href="#"><img src="{{$user->data->photo->image_21x21}}" class="profile">{{$user->data->name}}</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="Search...">
